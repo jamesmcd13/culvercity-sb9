@@ -1,0 +1,336 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SB9 + ADU Rules and Strategy — Adding Units on a Culver City R1 Lot (No Lot Split)</title>
+<style>
+  :root{ --navy:#0f2a43; --slate:#243b53; --muted:#5f7d98; --line:#d9e2ec;
+         --blue:#1565c0; --bluebg:#eef5fd; --green:#2e7d32; --greenbg:#eef9ee;
+         --amber:#b23b00; --amberbg:#fff4ec; --bg:#f4f7fb; }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--slate);
+       font:16px/1.6 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;}
+  header{background:var(--navy);color:#fff;padding:34px 24px;}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 28px;}
+  h1{margin:0 0 8px;font-size:26px;line-height:1.25;text-wrap:balance;}
+  header p{margin:0;opacity:.85;font-size:14.5px;}
+  h2{color:var(--navy);font-size:21px;margin:36px 0 6px;}
+  h3{color:var(--navy);font-size:16px;margin:20px 0 4px;}
+  section{background:#fff;border:1px solid var(--line);border-radius:12px;
+          padding:8px 26px 26px;margin:22px 0;box-shadow:0 2px 10px rgba(16,42,67,.05);}
+  ul{padding-left:20px;margin:8px 0;} li{margin:6px 0;}
+  p{margin:9px 0;}
+  .lead{font-size:16.5px;}
+  .rule{background:var(--bluebg);border:1px solid #cfe0f5;border-radius:10px;padding:12px 16px;margin:14px 0;}
+  .rule b{color:var(--blue);}
+  .strat-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:16px 0;}
+  .strat-card{background:var(--bluebg);border:1px solid #cfe0f5;border-radius:10px;padding:14px 18px;}
+  .strat-h{font-weight:700;color:var(--blue);font-size:18px;}
+  .strat-sub{font-weight:600;color:var(--navy);margin:3px 0 2px;font-size:14.5px;}
+  .strat-card ul{margin:4px 0 0;padding-left:18px;} .strat-card li{font-size:14px;margin:6px 0;}
+  @media(max-width:680px){.strat-grid{grid-template-columns:1fr;}}
+  .callout{border-radius:10px;padding:12px 16px;margin:14px 0;border:1px solid;}
+  .callout.g{background:var(--greenbg);border-color:#a9d8a9;}
+  .callout.g b{color:var(--green);}
+  .callout.a{background:var(--amberbg);border-color:#f0b890;}
+  .callout.a b{color:var(--amber);}
+  .callout.b{background:var(--bluebg);border-color:#cfe0f5;}
+  .callout.b b{color:var(--blue);}
+  .key{display:flex;gap:22px;flex-wrap:wrap;font-size:14px;margin:10px 0 4px;}
+  .key span{display:inline-flex;align-items:center;gap:7px;}
+  .sw{width:15px;height:15px;border-radius:3px;display:inline-block;border:1.5px solid;}
+  .sw.b{background:#cfe4fa;border-color:var(--blue);}
+  .sw.g{background:#d4edd4;border-color:var(--green);}
+  figure{margin:18px 0;text-align:center;}
+  figure svg{max-width:100%;height:auto;border:1px solid var(--line);border-radius:8px;background:#fff;}
+  figcaption{font-size:13px;color:var(--muted);margin-top:7px;}
+  table{border-collapse:collapse;width:100%;margin:14px 0;font-size:13.5px;font-variant-numeric:tabular-nums;}
+  th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top;}
+  th{background:#f0f4f9;color:var(--navy);}
+  tbody td:first-child{font-weight:600;color:var(--navy);background:#fafcfe;}
+  .bigtable{font-size:14.5px;} .bigtable th,.bigtable td{padding:11px 13px;}
+  th.hl,td.hl{background:#eef9ee;}
+  td .yes{color:var(--amber);font-weight:600;} td .no{color:var(--green);font-weight:600;}
+  .pill{display:inline-block;border-radius:999px;padding:1px 9px;font-size:12px;font-weight:600;}
+  .pill.g{background:#eef9ee;color:var(--green);border:1px solid #bfe3bf;}
+  .pill.b{background:#eef5fd;color:var(--blue);border:1px solid #cfe0f5;}
+  .pill.a{background:var(--amberbg);color:var(--amber);border:1px solid #f0b890;}
+  .tblwrap{overflow-x:auto;}
+  footer{color:var(--muted);font-size:12.5px;text-align:center;padding:26px 22px 40px;}
+  a{color:var(--blue);}
+  @media print{ body{background:#fff;} section{box-shadow:none;break-inside:avoid;}
+                figure,table{break-inside:avoid;} h2{break-after:avoid;}
+                header{-webkit-print-color-adjust:exact;print-color-adjust:exact;} }
+</style>
+
+<header><div class="wrap">
+  <h1>SB9 + ADU Rules and Strategy: Adding Units on a Culver City R1 Lot</h1>
+  <p>City of Culver City &middot; no lot split &middot; what you can build, how big each unit can be, and two ways to a four-unit project &middot; prepared by Conscious Communities Real Estate &middot; July 2026</p>
+</div></header>
+
+<div class="wrap">
+
+<section>
+  <p class="lead">On a single <b>R1</b> lot in the City of Culver City, with <b>no lot split</b>, you can build a <b>four-unit</b> project two ways. State law (SB9) forces the city to permit two primary dwellings on an R1 lot even though the base zone allows only one, and state ADU law adds two more. The whole game is <b>floor area</b>: Culver City's R1 zone is a flat <b>0.45 FAR</b> (lot area &times; 0.45), the two SB9 dwellings draw on that budget, and the ADUs stack on top &mdash; <b>800 sf per ADU FAR-free, guaranteed</b>.</p>
+  <div class="callout a" style="margin-top:14px">
+    <b>The one size rule to remember.</b> Every ADU gets <b>800 sf FAR-free, by-right</b> (state law bars the City from using FAR, lot coverage, or open space to block an 800 sf ADU &mdash; GC 66321(b)(3)). Above 800 sf you can push a detached ADU toward <b>1,200 sf</b> (2+ bedroom) / 850 sf (1 bedroom), but that upper band is a <b>ceiling to confirm with the City</b>, not a guarantee &mdash; and <b>no detached ADU may ever exceed 1,200 sf</b> (hard state cap, GC 66314(d)(5)). Underwrite 800 sf/ADU; treat 800&ndash;1,200 sf as upside.
+  </div>
+  <div class="strat-grid">
+    <div class="strat-card">
+      <div class="strat-h">Strategy 1</div>
+      <div class="strat-sub">Duplex in front + two detached ADUs in back</div>
+      <ul>
+        <li><b>2 units at full R1 height</b> (the duplex, 27&ndash;30 ft) sharing the 0.45 FAR budget</li>
+        <li>The duplex makes the lot multifamily, so <b>two detached back ADUs</b> stack FAR-free (800 sf each; up to ~1,200 sf on the upside) and can rise to <b>up to 30 ft</b></li>
+        <li>Best for <b>maximum total square footage</b> &mdash; both extra units are detached and free</li>
+      </ul>
+    </div>
+    <div class="strat-card">
+      <div class="strat-h">Strategy 2</div>
+      <div class="strat-sub">Two detached main dwellings + attached ADU + detached ADU</div>
+      <ul>
+        <li><b>3 units at full R1 height</b> (two houses + the attached ADU); one detached ADU at 16&ndash;20 ft</li>
+        <li>Only the detached 800 sf ADU is fully FAR-free; the <b>attached ADU is free only to 800 sf</b>, then it draws on the budget</li>
+        <li>Best for <b>the two main houses as the biggest, most sellable product</b></li>
+      </ul>
+    </div>
+  </div>
+  <div class="key">
+    <span><span class="sw b"></span> Counts toward the 0.45 FAR budget</span>
+    <span><span class="sw g"></span> FAR-free (stacks on top, up to 800 sf guaranteed per ADU)</span>
+  </div>
+  <p style="font-size:13px;color:var(--muted);margin:8px 0 0">The diagrams below are schematic: each block's width shows a unit's relative floor area and its height is drawn roughly to scale. They are not buildable site plans and are not to scale.</p>
+</section>
+
+<section>
+  <h2>1. The unit types you can use</h2>
+  <p>Two are full homes (primary dwellings), the rest are accessory units (ADUs / JADU). The column that decides everything is <b>does it count toward floor area (FAR)?</b> Culver City's ADU rules are in <b>CCMC 17.400.095</b>; the SB9 rules come from state law (Gov't Code 65852.21) via the city's 2025 subdivision update (Ord. 2025-007). State ADU law was recodified in 2025 into <b>Gov't Code 66310&ndash;66342</b>.</p>
+  <div class="tblwrap">
+  <table>
+    <thead><tr>
+      <th>Unit type</th><th>Authorizing law</th><th>Max size</th><th>Counts toward FAR?</th><th>Height</th><th>Side/rear setbacks</th><th>Parking</th>
+    </tr></thead>
+    <tbody>
+      <tr><td>Existing or new main dwelling <span style="font-weight:400;color:var(--muted)">— keep the house, or build new</span></td><td>CCMC 17.210.020 (R1)</td><td>per 0.45 FAR</td><td><span class="yes">Yes</span></td><td>existing, or 27 ft flat / 30 ft sloped if rebuilt</td><td>existing, or 5 ft if rebuilt</td><td>existing</td></tr>
+      <tr><td>SB9 second main dwelling</td><td>GC 65852.21</td><td>no per-unit cap — draws on 0.45 FAR; 800 sf guaranteed floor</td><td><span class="yes">Yes</span></td><td>R1, 27&ndash;30 ft (2&ndash;3 stories)</td><td>&le;4 ft</td><td>1, or 0 near transit / car-share</td></tr>
+      <tr><td>Duplex: two attached front main dwellings</td><td>GC 65852.21 (two-unit development)</td><td>the two share the 0.45 FAR budget</td><td><span class="yes">Yes</span> (both units)</td><td>R1, 27&ndash;30 ft</td><td>&le;4 ft</td><td>1/unit, 0 near transit</td></tr>
+      <tr><td>Detached State ADU (single-family lot)</td><td>GC 66323(a)(2) / CCMC 17.400.095.A.2</td><td><b>800 sf</b></td><td><span class="no">No</span> — FAR-free, by-right</td><td>16 ft; 18 ft near transit; +2 ft (=20) if roof pitch matches</td><td>4 ft</td><td>0</td></tr>
+      <tr><td>Detached ADU behind a duplex (proposed-multifamily lot)</td><td>GC 66323(a)(4) / CCMC 17.400.095.A.5, E.2.b</td><td><b>800 sf</b> bankable; up to <b>1,200 sf</b> (2+BR) / 850 sf (1BR) as a confirm-with-City ceiling</td><td><span class="no">No</span> to 800 sf; 800&ndash;1,200 band <span class="yes">confirm</span></td><td><b>up to 30 ft</b> on a multistory-MF lot (CCMC E.2.b.i); 16/18/20 ft otherwise</td><td>4 ft</td><td>0</td></tr>
+      <tr><td>Attached ADU <span style="font-weight:400;color:var(--muted)">(built onto a main dwelling)</span></td><td>GC 66314(d)(4) / CCMC 17.400.095.B.1</td><td>up to 50% of the primary; City must allow &ge;850 sf (1BR) / 1,000 sf (2+BR)</td><td><span class="no">Free to 800 sf</span>; the portion over 800 sf <span class="yes">counts</span></td><td>25 ft, or the R1 house limit if lower</td><td>with the house (4 ft)</td><td>0</td></tr>
+      <tr><td>Detached &ldquo;Ordinance&rdquo; ADU (single-family lot, over 800 sf)</td><td>CCMC 17.400.095.B.3</td><td>up to <b>1,200 sf</b> (2+BR) / 850 sf (1BR)</td><td><span class="no">Free to 800 sf</span>; 800&ndash;1,200 band <span class="yes">counts</span></td><td>per R1 (up to 27&ndash;30 ft)</td><td>4 ft</td><td>0</td></tr>
+      <tr><td>JADU <span class="pill g">optional</span></td><td>GC 66333 / CCMC 17.400.095.M</td><td>500 sf</td><td><span class="no">No</span> (carved inside the house — adds no floor area)</td><td>within the house</td><td>n/a</td><td>0; owner-occupancy if it shares a bathroom</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p style="font-size:13px;color:var(--muted)"><b>Number allowed (no lot split):</b> SB9 gives up to two primary dwellings. A duplex (proposed multifamily) allows <b>up to two detached ADUs</b> (CCMC 17.400.095.E.2.b.iii). Two detached houses (single-family) use the single-family menu: one ADU + one JADU. <b>Confirm the ADU count on an SB9 lot with the City</b> — it is the biggest variable in reaching four units (see the note in Section 4).</p>
+</section>
+
+<section>
+  <h2>2. How big can each unit actually be</h2>
+  <p>Your floor-area budget is <b>lot area &times; 0.45</b> — flat across all R1 lots in Culver City (a 6,000 sf lot = 2,700 sf; a 7,500 sf lot = 3,375 sf; a 10,000 sf lot = 4,500 sf). The two SB9 dwellings share that budget. Every ADU then adds <b>800 sf FAR-free on top</b>. This is the section that answers "what can I actually build."</p>
+  <div class="tblwrap">
+  <table>
+    <thead><tr><th>Unit</th><th>Maximum size</th><th>FAR treatment</th><th>Height</th></tr></thead>
+    <tbody>
+      <tr><td>SB9 duplex unit / main dwelling</td><td><b>No per-unit cap.</b> The two units share lot &times; 0.45 (e.g. 7,500 sf lot &rarr; 3,375 sf, ~1,688 sf/unit). 800 sf is a guaranteed floor, never a ceiling.</td><td><span class="pill b">counts</span> the base budget</td><td>27&ndash;30 ft</td></tr>
+      <tr><td>Detached State ADU (single-family)</td><td><b>800 sf</b> <span class="pill g">bankable</span></td><td><span class="pill g">FAR-free</span> fully exempt</td><td>16 / 18 / 20 ft</td></tr>
+      <tr><td>Detached ADU behind a duplex</td><td><b>800 sf</b> <span class="pill g">bankable</span>; up to <b>1,200 sf</b> (2+BR) / 850 sf (1BR) <span class="pill a">confirm with City</span> &mdash; never above 1,200 sf</td><td><span class="pill g">FAR-free to 800 sf</span>; 800&ndash;1,200 band contingent</td><td>up to 30 ft</td></tr>
+      <tr><td>Attached ADU</td><td>up to <b>50% of the house</b> (City must allow &ge;850 / 1,000 sf); practically to 1,200 sf</td><td><span class="pill g">FAR-free to 800 sf</span>; the overage <span class="pill b">counts</span></td><td>25 ft or the house limit</td></tr>
+      <tr><td>Detached &ldquo;Ordinance&rdquo; ADU</td><td>up to <b>1,200 sf</b> (2+BR) / 850 sf (1BR)</td><td><span class="pill g">FAR-free to 800 sf</span>; 800&ndash;1,200 band <span class="pill b">counts</span></td><td>up to 27&ndash;30 ft</td></tr>
+      <tr><td>JADU</td><td><b>500 sf</b></td><td><span class="pill g">FAR-neutral</span> (inside the house)</td><td>within the house</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="callout g"><b>The FAR-free stack.</b> The one number to bank on <i>every</i> ADU is <b>800 sf, FAR-free</b> (GC 66321(b)(3): FAR / lot coverage / open space cannot block an 800 sf ADU). On a duplex/multifamily lot the two detached back ADUs each get that 800 sf free — that is Strategy 1's advantage.</div>
+  <div class="callout a"><b>The 800 &rarr; 1,200 band is upside, not a given.</b> A detached ADU can be built up to <b>1,200 sf</b> (2+ bedroom), but the FAR-free treatment of the portion <i>above</i> 800 sf is not guaranteed — it depends on how the City reads the state exemption. Underwrite the FAR-free stack at 800 sf/ADU and confirm anything larger in writing. <b>No detached ADU can ever exceed 1,200 sf</b> (GC 66314(d)(5)).</div>
+
+  <h3>Worked totals — a bankable floor and an upside ceiling</h3>
+  <p style="margin-top:2px">Total buildable square footage across all four units, for three common R1 lot sizes. The <b>bankable</b> figure underwrites every ADU at 800 sf FAR-free; the <b>upside</b> pushes the ADUs toward 1,200 sf (subject to City confirmation).</p>
+  <div class="tblwrap">
+  <table class="bigtable">
+    <thead><tr><th style="text-align:left">R1 lot size</th><th>0.45 FAR budget (the two SB9 units)</th><th class="hl">Strategy 1 total (4 units)</th><th>Strategy 2 total (4 units)</th></tr></thead>
+    <tbody>
+      <tr><td>6,000 sf</td><td>2,700 sf</td><td class="hl"><b>~4,300 sf</b> bankable &rarr; ~5,100 sf upside</td><td>~4,300 sf bankable &rarr; ~4,700 sf upside</td></tr>
+      <tr><td>7,500 sf</td><td>3,375 sf</td><td class="hl"><b>~4,975 sf</b> bankable &rarr; ~5,775 sf upside</td><td>~4,975 sf bankable &rarr; ~5,375 sf upside</td></tr>
+      <tr><td>10,000 sf</td><td>4,500 sf</td><td class="hl"><b>~6,100 sf</b> bankable &rarr; ~6,900 sf upside</td><td>~6,100 sf bankable &rarr; ~6,500 sf upside</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p style="font-size:13px;color:var(--muted)">Example (7,500 sf, Strategy 1): duplex = 3,375 sf counted (~1,688 sf/unit) + two detached ADUs at 800 sf each FAR-free = <b>4,975 sf</b> bankable; push both ADUs to 1,200 sf and it reaches ~5,775 sf. Strategy 2 ties at the bankable floor but trails on the upside because its attached ADU is FAR-free only to 800 sf. Source: GC 66321 / 66314 / 66323, HCD ADU Handbook (Mar 2026), CCMC 17.400.095 &amp; 17.210.020.</p>
+</section>
+
+<section>
+  <h2>3. State ADU height: 16, 18, 20 &mdash; or 30 ft in Culver City</h2>
+  <p>A detached ADU's height ladder comes from GC 66321(b)(4):</p>
+  <ul>
+    <li><b>16 ft</b> — the base height.</li>
+    <li><b>18 ft</b> — if the lot is within a half-mile walking distance of a major transit stop or high-quality transit corridor (or on a lot with a multifamily, multistory dwelling).</li>
+    <li><b>20 ft</b> — the near-transit 18 ft <b>plus 2 ft</b> to match the primary dwelling's roof pitch. (There is no standalone 20 ft tier in the statute; 20 = 18 + 2.)</li>
+  </ul>
+  <div class="callout b"><b>The Culver City break.</b> CCMC 17.400.095.E.2.b.i sets the maximum at <b>30 ft for a detached ADU on a lot with an existing or proposed multifamily, multistory dwelling</b>. Build the two SB9 units as a two-story duplex and the lot qualifies — so the back ADUs are not stuck at 16&ndash;20 ft. (State law only floors this at 18 ft; Culver City's 30 ft is a local upgrade — worth confirming on your parcel.) Note: extra height does <b>not</b> raise the floor-area cap — a taller ADU is still bound by the 1,200 sf detached maximum.</div>
+  <p>An <b>attached ADU</b> may reach 25 ft (or the R1 house limit, whichever is lower); the <b>SB9 main dwellings</b> follow R1 height — 27 ft flat, 30 ft with a roof pitched 3:12 or steeper.</p>
+</section>
+
+<section>
+  <h2>4. The two SB9 + ADU combinations</h2>
+  <p>The reason this works without a lot split is one line of the statute. <b>GC 65852.21(j)</b> says a city need not allow ADUs only when a parcel uses <i>both</i> the two-unit development <i>and</i> the urban lot split. Skip the lot split and the city must still permit your ADUs — so the two SB9 units and the ADUs <b>stack</b>. Two ways to combine them:</p>
+  <h3>Path A — a duplex (the two units are attached)</h3>
+  <p>A two-unit development built as a duplex makes the lot a proposed multiple-family dwelling, which allows <b>up to two detached ADUs</b> (CCMC 17.400.095.E.2.b.iii; GC 66323(a)(4)) — 800 sf each FAR-free, up to 30 ft on a multistory-MF lot. This is <b>Strategy 1</b>.</p>
+  <h3>Path B — two detached one-family dwellings</h3>
+  <p>Two detached houses (an existing or new main dwelling plus a second SB9 main dwelling) use the single-family ADU menu: <b>one ADU plus one JADU</b>. This is <b>Strategy 2</b> — we use an attached ADU + a detached ADU to keep all four units full-size (with the JADU as the fallback fourth unit).</p>
+  <div class="callout a"><b>Confirm the ADU count — this is the #1 variable.</b> Reaching four units assumes the City grants the full ADU allowance <i>on top of</i> the two SB9 units. SB9 two-unit developments can carry their own ADU-count limits, and the application of the multifamily ADU rules to a <i>proposed</i> (not existing) duplex is contestable — a conservative City could limit the lot to a single ADU. Verify the count with Culver City Planning before committing to a four-unit pro forma.</div>
+</section>
+
+<section>
+  <h2>5. Strategy 1: Duplex in front, two ADUs in back</h2>
+  <ul>
+    <li>Make the front a legal SB9 duplex (two attached units that meet R1 standards). <b>Both duplex units count toward FAR</b> and share the 0.45 budget; they get full R1 height, 27&ndash;30 ft.</li>
+    <li><b>The headline:</b> the duplex makes the lot multifamily, so the <b>two detached back ADUs each stack 800 sf FAR-free</b> (up to ~1,200 sf on the upside) and — because the duplex is a multistory multifamily dwelling — each can rise to <b>up to 30 ft</b>. Both extra units are detached and free, which is why this is the maximum-square-footage play.</li>
+    <li>The binding limits on the back ADUs are height, the 4 ft side/rear setbacks, and the R1 side encroachment plane. R1 has no lot-coverage cap.</li>
+    <li>Four units: the two duplex units up front, plus the two detached ADUs. Zero parking on the ADUs; the SB9 units need one space each unless near transit or a car-share.</li>
+  </ul>
+  <figure>
+    <svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Strategy 1 elevation: duplex in front, two tall detached ADUs in back, with square footage">
+      <line x1="40" y1="250" x2="690" y2="250" stroke="#9fb3c8" stroke-width="2"/>
+      <text x="46" y="270" font-size="12" fill="#5f7d98">FRONT / street</text>
+      <text x="640" y="270" font-size="12" fill="#5f7d98">REAR</text>
+      <line x1="40" y1="70" x2="690" y2="70" stroke="#cbd6e2" stroke-width="1" stroke-dasharray="5 4"/>
+      <text x="44" y="66" font-size="11" fill="#5f7d98">30 ft</text>
+      <!-- duplex -->
+      <rect x="70" y="70" width="200" height="180" fill="#cfe4fa" stroke="#1565c0" stroke-width="2"/>
+      <line x1="170" y1="70" x2="170" y2="250" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="3 3"/>
+      <text x="170" y="115" font-size="13" fill="#243b53" text-anchor="middle" font-weight="700">SB9 duplex</text>
+      <text x="170" y="134" font-size="11.5" fill="#243b53" text-anchor="middle">2 units &middot; 27&ndash;30 ft</text>
+      <text x="170" y="153" font-size="11.5" fill="#243b53" text-anchor="middle">~1,688 sf/unit*</text>
+      <text x="170" y="174" font-size="11" fill="#1565c0" text-anchor="middle" font-weight="700">counts toward FAR</text>
+      <!-- ADU 1 -->
+      <rect x="360" y="82" width="140" height="168" fill="#d4edd4" stroke="#2e7d32" stroke-width="2"/>
+      <text x="430" y="122" font-size="12.5" fill="#243b53" text-anchor="middle" font-weight="700">Detached ADU</text>
+      <text x="430" y="141" font-size="11" fill="#243b53" text-anchor="middle">800 sf (up to 1,200)</text>
+      <text x="430" y="160" font-size="11" fill="#243b53" text-anchor="middle">up to 30 ft</text>
+      <text x="430" y="181" font-size="11.5" fill="#2e7d32" text-anchor="middle" font-weight="700">FAR-free</text>
+      <!-- ADU 2 -->
+      <rect x="520" y="82" width="140" height="168" fill="#d4edd4" stroke="#2e7d32" stroke-width="2"/>
+      <text x="590" y="122" font-size="12.5" fill="#243b53" text-anchor="middle" font-weight="700">Detached ADU</text>
+      <text x="590" y="141" font-size="11" fill="#243b53" text-anchor="middle">800 sf (up to 1,200)</text>
+      <text x="590" y="160" font-size="11" fill="#243b53" text-anchor="middle">up to 30 ft</text>
+      <text x="590" y="181" font-size="11.5" fill="#2e7d32" text-anchor="middle" font-weight="700">FAR-free</text>
+    </svg>
+    <figcaption>Strategy 1 on a 7,500 sf lot — the duplex draws the full 3,375 sf FAR budget; the two detached back ADUs stack 800 sf each FAR-free (up to ~1,200 sf on the upside), up to 30 ft. <span class="pill g">~4,975 sf bankable across 4 units</span> &nbsp;*duplex sf shown for a 7,500 sf lot.</figcaption>
+  </figure>
+</section>
+
+<section>
+  <h2>6. Strategy 2: Two detached main dwellings + attached ADU + detached ADU</h2>
+  <ul>
+    <li>Use the existing house or a new build as main dwelling one, and add a <b>detached second main dwelling</b> in the rear (a real two- to three-story R1 house, 27&ndash;30 ft). Both main dwellings share the 0.45 FAR budget. Keep detached dwellings at least <b>8 ft apart</b> (CCMC 17.210.020).</li>
+    <li>One dwelling carries an <b>attached ADU</b> (up to 50% of that house; the City must allow at least 850 sf / 1,000 sf). It shares the house's height — but note it is <b>FAR-free only for its first 800 sf</b>; any square footage above 800 sf draws on the 0.45 budget.</li>
+    <li>Plus <b>one detached ADU</b>: an <b>800 sf State ADU</b> that is fully FAR-free (the usual pick), or a larger <b>Ordinance ADU up to 1,200 sf</b> — but on an Ordinance ADU only the first 800 sf is free; the 800&ndash;1,200 band counts, which is costly on a flat 0.45 budget.</li>
+    <li>Four units: the two main dwellings, the attached ADU, and the detached ADU. If the City limits a single-family lot to one ADU, use a <b>JADU</b> (500 sf, inside a house, owner-occupancy) as the fourth unit instead.</li>
+  </ul>
+  <figure>
+    <svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Strategy 2 elevation: two full-height houses, an attached ADU that partly counts toward FAR, and a short detached ADU">
+      <line x1="40" y1="250" x2="690" y2="250" stroke="#9fb3c8" stroke-width="2"/>
+      <text x="46" y="270" font-size="12" fill="#5f7d98">FRONT / street</text>
+      <text x="640" y="270" font-size="12" fill="#5f7d98">REAR</text>
+      <line x1="40" y1="70" x2="690" y2="70" stroke="#cbd6e2" stroke-width="1" stroke-dasharray="5 4"/>
+      <text x="44" y="66" font-size="11" fill="#5f7d98">30 ft</text>
+      <line x1="40" y1="130" x2="690" y2="130" stroke="#cbd6e2" stroke-width="1" stroke-dasharray="5 4"/>
+      <text x="44" y="126" font-size="11" fill="#5f7d98">18 ft</text>
+      <!-- House 1 -->
+      <rect x="70" y="70" width="150" height="180" fill="#cfe4fa" stroke="#1565c0" stroke-width="2"/>
+      <text x="145" y="122" font-size="12.5" fill="#243b53" text-anchor="middle" font-weight="700">Main house 1</text>
+      <text x="145" y="141" font-size="11" fill="#243b53" text-anchor="middle">27&ndash;30 ft</text>
+      <text x="145" y="162" font-size="11" fill="#1565c0" text-anchor="middle" font-weight="700">counts</text>
+      <!-- Attached ADU (split fill: green base to 800 sf, blue top counts) -->
+      <rect x="220" y="100" width="62" height="150" fill="#d4edd4" stroke="#2e7d32" stroke-width="2"/>
+      <rect x="220" y="100" width="62" height="46" fill="#cfe4fa" stroke="#1565c0" stroke-width="1.5"/>
+      <text x="251" y="170" font-size="10.5" fill="#243b53" text-anchor="middle">attached</text>
+      <text x="251" y="184" font-size="10.5" fill="#243b53" text-anchor="middle">ADU</text>
+      <text x="251" y="200" font-size="9.5" fill="#2e7d32" text-anchor="middle" font-weight="700">800 free</text>
+      <text x="251" y="212" font-size="9.5" fill="#1565c0" text-anchor="middle" font-weight="700">rest counts</text>
+      <!-- House 2 -->
+      <rect x="380" y="70" width="150" height="180" fill="#cfe4fa" stroke="#1565c0" stroke-width="2"/>
+      <text x="455" y="122" font-size="12.5" fill="#243b53" text-anchor="middle" font-weight="700">Main house 2</text>
+      <text x="455" y="141" font-size="11" fill="#243b53" text-anchor="middle">27&ndash;30 ft</text>
+      <text x="455" y="162" font-size="11" fill="#1565c0" text-anchor="middle" font-weight="700">counts</text>
+      <!-- Detached State ADU -->
+      <rect x="575" y="130" width="95" height="120" fill="#d4edd4" stroke="#2e7d32" stroke-width="2"/>
+      <text x="622" y="168" font-size="11" fill="#243b53" text-anchor="middle">800 sf</text>
+      <text x="622" y="183" font-size="11" fill="#243b53" text-anchor="middle">State ADU</text>
+      <text x="622" y="204" font-size="10.5" fill="#2e7d32" text-anchor="middle" font-weight="700">FAR-free</text>
+    </svg>
+    <figcaption>Strategy 2 — three units reach full R1 height (two houses + the attached ADU), but only the detached 800 sf State ADU is fully FAR-free; the attached ADU is free just to 800 sf (green), and any square footage above that (blue cap) draws on the budget. <span class="pill g">~4,975 sf bankable across 4 units</span></figcaption>
+  </figure>
+</section>
+
+<section>
+  <h2>7. Strategy comparison</h2>
+  <div class="tblwrap">
+  <table>
+    <thead><tr><th></th><th>Strategy 1: Duplex + 2 ADUs in back</th><th>Strategy 2: Two houses + attached ADU + detached ADU</th></tr></thead>
+    <tbody>
+      <tr><td>Units</td><td>4 (duplex = 2, plus 2 detached ADUs)</td><td>4 (two main dwellings, plus attached ADU + detached ADU)</td></tr>
+      <tr style="background:#eef9ee"><td>Fully FAR-free units</td><td><b>2</b> (both detached back ADUs, 800 sf each free)</td><td><b>1</b> (only the detached 800 sf State ADU; the attached ADU is free to 800 sf)</td></tr>
+      <tr><td>Units at full R1 height (27&ndash;30 ft)</td><td>2 (the duplex) — plus the back ADUs can reach up to 30 ft</td><td>3 (two houses + the attached ADU)</td></tr>
+      <tr><td>Total buildable (7,500 sf lot)</td><td><b>~4,975 sf</b> bankable &rarr; ~5,775 sf upside</td><td>~4,975 sf bankable &rarr; ~5,375 sf upside</td></tr>
+      <tr><td>FAR (flat 0.45)</td><td>Duplex counts; both detached ADUs free to 800 sf (band above confirm)</td><td>Both houses count; detached ADU free to 800 sf; attached ADU free to 800 sf then counts</td></tr>
+      <tr><td>Best for</td><td>Maximum total square footage — two free detached units, up to 30 ft</td><td>Two main houses as the biggest, most sellable structures</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p style="font-size:13px;color:var(--muted)">At the bankable 800 sf/ADU underwrite the two strategies tie; Strategy 1 pulls ahead only on the upside, because both of its extra units are detached (each can chase the 1,200 sf ceiling) while Strategy 2's attached ADU is free only to 800 sf.</p>
+</section>
+
+<section>
+  <h2>8. Culver City's residential zones (how R1 compares)</h2>
+  <p>Every lot in this playbook is <b>R1 (Single-Family Residential)</b>. Unlike the City of Los Angeles, Culver City has <b>no lettered/numbered R1 variation zones</b> — R1 is a single set of standards with a flat 0.45 FAR. SB9 does <i>not</i> apply in the multifamily zones (they already allow multiple units); it applies in R1 and R2.</p>
+  <div class="tblwrap">
+  <table class="bigtable">
+    <thead>
+      <tr><th style="text-align:left">Standard</th><th class="hl">R1 &mdash; Single-Family</th><th>R2 &mdash; Two-Family</th><th>RLD &mdash; Low-Density Multifamily</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Base density</td><td class="hl">8.7 du/ac &mdash; <b>1 unit/parcel</b></td><td>17.4 du/ac &mdash; 2 units/parcel</td><td>35 du/ac (triplex, fourplex, townhouse)</td></tr>
+      <tr><td>Max floor area</td><td class="hl"><b>0.45 FAR</b> (flat)</td><td>1,500 sf + 40% of lot (&lt;8,000 sf) / 60% (&ge;8,000 sf)</td><td>per multifamily standards</td></tr>
+      <tr><td>Max height (primary)</td><td class="hl"><b>27 ft flat / 30 ft sloped</b></td><td>30 ft</td><td>32 ft</td></tr>
+      <tr><td>Front setback</td><td class="hl">20 ft (25 ft for a second story / any facade over 18 ft)</td><td>15 ft</td><td>10 ft</td></tr>
+      <tr><td>Interior side setback</td><td class="hl">5 ft + a 1:1 (45&deg;) plane from 18 ft</td><td>4 ft + a 1:1 plane from 20 ft</td><td>5 ft</td></tr>
+      <tr><td>Rear setback</td><td class="hl">15 ft</td><td>10 ft</td><td>10 ft</td></tr>
+      <tr><td>Min lot size (new)</td><td class="hl">5,000 sf</td><td>5,000 sf</td><td>5,000 sf</td></tr>
+      <tr><td>Max lot coverage</td><td class="hl"><b>None</b> — FAR + setbacks + the side plane govern</td><td>None (FAR-style cap governs)</td><td>&mdash;</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p style="font-size:13.5px;margin:12px 0 4px"><b>Your budget</b> = lot area &times; 0.45. Example: a 7,500 sf R1 lot = 7,500 &times; 0.45 = <b>3,375 sf</b> of counted floor area for the two SB9 units, before the FAR-free ADUs stack on top.</p>
+  <p style="font-size:13px;color:var(--muted)"><b>SB9 in R1:</b> an SB9 two-unit development follows these R1 objective standards, with three statutory overrides — side/rear setbacks capped at 4 ft, at least 800 sf per unit guaranteed, and parking limited to one space per unit (zero near transit or a car-share). Confirm a parcel's exact zone on the Culver City zoning map. Source: CCMC 17.210.020, Table 2-3.</p>
+</section>
+
+<section>
+  <h2>9. The other standards that shape a design</h2>
+  <h3>Setbacks</h3>
+  <p>New SB9 units and ADUs need no more than <b>4 ft</b> at the side and rear (ADUs may drop to 2 ft against a street, alley, or mixed-use zone). An existing main dwelling you keep retains its setbacks. The R1 front yard is <b>20 ft</b> (25 ft for second-story massing over 18 ft). Keep detached dwellings <b>8 ft</b> apart, and 5 ft between a primary and an ADU.</p>
+  <h3>Parking</h3>
+  <p><b>ADUs and JADUs require zero parking</b> in Culver City (CCMC 17.400.095.I). SB9 units require zero within a half-mile of transit or one block of a car-share; otherwise about one space per unit. Tandem and uncovered spaces are allowed.</p>
+  <h3>The R1 side encroachment plane</h3>
+  <p>What actually limits the upper massing on an R1 lot is not lot coverage — R1 has none — it is the <b>side setback plane</b>: above 18 ft, a <b>1:1 (45&deg;) plane</b> rises and angles inward from each interior side lot line, so upper floors step back as the building climbs (CCMC 17.210.020). With the 27/30 ft height limit and the 0.45 FAR, that plane is the real shape constraint.</p>
+  <h3>Objective design standards</h3>
+  <p>SB9 two-unit developments are ministerial (no hearing, no CEQA) but must meet the city's <b>Citywide Residential and Mixed-Use Objective Design Standards</b> and the subdivision rules in CCMC Chapter 15.10 (Ord. 2025-007). ADUs and JADUs are exempt from those objective design standards (CCMC 17.400.095.N.2).</p>
+  <h3>Eligibility gates (both strategies)</h3>
+  <p>SB9 does not apply to a parcel in a historic district or on the historic register, in a very-high fire or flood hazard area, on protected habitat/wetlands, or to housing that is rent-restricted, income-restricted, or was tenant-occupied in the last three years (no more than 25% of exterior walls may be demolished unless the site was vacant). A two-unit development with no lot split carries <b>no owner-occupancy requirement</b> — that condition (a 3-year affidavit) only attaches to an urban <i>lot split</i>.</p>
+</section>
+
+<section>
+  <h2>Overall takeaway</h2>
+  <ul>
+    <li><b>Bank 800 sf per ADU, FAR-free.</b> That is the one number guaranteed by state law and the floor every pro forma should use. On a 7,500 sf lot both strategies deliver about <b>4,975 sf across four units</b> at that underwrite.</li>
+    <li><b>Strategy 1 (duplex + 2 detached ADUs) is the maximum-square-footage play.</b> Both extra units are detached, so both stack 800 sf FAR-free and can reach up to 30 ft (Culver City's multistory-multifamily provision). Push the ADUs toward the 1,200 sf ceiling and it reaches ~5,775 sf — the upside no other configuration matches.</li>
+    <li><b>Strategy 2 (two houses + attached + detached ADU) is the full-height-houses play.</b> Three of the four units reach full R1 height, but only one is fully FAR-free — the attached ADU is free just to 800 sf, then it competes with the houses for the 0.45 budget.</li>
+    <li><b>Two things to confirm with the City before a four-unit pro forma:</b> (1) the <b>ADU count</b> allowed on an SB9 lot (the biggest variable in reaching four units), and (2) whether an ADU above 800 sf keeps its FAR-free treatment. No detached ADU can ever exceed 1,200 sf.</li>
+  </ul>
+</section>
+
+</div>
+
+<footer>
+  Schematic feasibility diagrams for a Culver City R1 lot; meant to show where units go, how big each can be, and how each is treated — not final massing or a site plan.<br>
+  City of Culver City R1 &middot; SB9 (no lot split) + state ADU law &middot; sources: CCMC 17.210.020 (Table 2-3, R1 standards), 17.400.095 (ADUs / JADUs), Chapter 15.10 &amp; Ord. 2025-007 (subdivision / SB9 update), GC 65852.21 &amp; 66411.7 (SB9), GC 66310&ndash;66342 (ADU law — incl. 66321(b)(3) 800 sf FAR guarantee, 66314(d)(5) 1,200 sf detached cap, 66323 statewide exemption), HCD ADU Handbook (Mar 2026), Culver City SB9 Fact Sheet (Sept 2025). Sizes above 800 sf/ADU, the ADU count on an SB9 lot, the exact R1 FAR, and the 30 ft multifamily-ADU height should be confirmed with Culver City Planning (310) 253-5710 before locking a design. Not legal advice.
+</footer>
