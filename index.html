@@ -54,8 +54,14 @@
   .tblwrap{overflow-x:auto;}
   footer{color:var(--muted);font-size:12.5px;text-align:center;padding:26px 22px 40px;}
   a{color:var(--blue);}
+  .sitenav{background:#0b2035;position:sticky;top:0;z-index:30;box-shadow:0 2px 8px rgba(11,32,53,.25);}
+  .sitenav .wrap{display:flex;gap:4px;flex-wrap:wrap;padding:0 28px;}
+  .sitenav a{color:#aebfd2;text-decoration:none;font-size:14px;font-weight:600;padding:13px 18px;border-bottom:3px solid transparent;white-space:nowrap;}
+  .sitenav a:hover{color:#fff;}
+  .sitenav a.active{color:#fff;border-bottom-color:#4a90d9;background:rgba(74,144,217,.10);}
+  .sitenav .navlabel{color:#6d829a;font-size:12px;font-weight:600;padding:13px 8px 13px 0;letter-spacing:.03em;}
   @media print{ body{background:#fff;} section{box-shadow:none;break-inside:avoid;}
-                figure,table{break-inside:avoid;} h2{break-after:avoid;}
+                figure,table{break-inside:avoid;} h2{break-after:avoid;} .sitenav{display:none;}
                 header{-webkit-print-color-adjust:exact;print-color-adjust:exact;} }
 </style>
 
@@ -63,6 +69,12 @@
   <h1>SB9 + ADU Rules and Strategy: Adding Units on a Culver City R1 Lot</h1>
   <p>City of Culver City &middot; no lot split &middot; what you can build, how big each unit can be, and two ways to a four-unit project &middot; prepared by Conscious Communities Real Estate &middot; July 2026</p>
 </div></header>
+
+<nav class="sitenav"><div class="wrap">
+  <span class="navlabel">CHOOSE A PLAYBOOK:</span>
+  <a href="index.html" class="active">Single-Family &middot; R1 (SB9 + ADU)</a>
+  <a href="multifamily.html">Multifamily &middot; R2 &amp; up</a>
+</div></nav>
 
 <div class="wrap">
 
